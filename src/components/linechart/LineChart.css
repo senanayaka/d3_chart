@@ -8,7 +8,7 @@
 }
 
 .linechart_axis {
-  stroke:black;
+  stroke:rgb(53, 51, 51);
 }
 
 .linechart_point {
@@ -17,5 +17,9 @@
 }
 
 .linechart_axis_small{
+  stroke: #dfd7d7;
+}
+
+.linechart_axisy_small{
   stroke: #dfd7d7;
 }

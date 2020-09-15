@@ -1,10 +1,6 @@
 import React, {Component} from "react"
 import "./LineChart.css"
-import { scaleLinear, scaleBand } from 'd3-scale';
-import XYAxis from '../axis/xy-axis';
-import { extent } from 'd3-array';
-import { transition } from 'd3-transition';
- 
+
 class LineChart extends Component {
       // GET MAX & MIN X
       getMinX() {
@@ -64,6 +60,12 @@ class LineChart extends Component {
         <line
           x1={this.getSvgX(minX)} y1={this.getSvgY(minY)}
           x2={this.getSvgX(minX)} y2={this.getSvgY(maxY)} />
+
+        {[...new Array(15)].map((item, index) =>  
+          <line className="linechart_axisy_small"
+          x1={this.getSvgX(index+5)} y1={this.getSvgY(minY)}
+          x2={this.getSvgX(index+5)} y2={this.getSvgY(maxY)} />)}
+
       </g>
       );
     }

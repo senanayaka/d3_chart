@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import LineChart from './components/linechart/LineChart';
 import ToolTip from './components/tooltip/ToolTip';
-import { line, curveMonotoneX } from 'd3-shape';
 
 class App extends Component {
   constructor(props) {
