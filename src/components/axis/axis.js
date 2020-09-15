@@ -1,19 +1,23 @@
-import React from "react";
+import React, {Component} from "react"
 import { select, selectAll } from "d3-selection";
 import { axisBottom, axisLeft } from "d3-axis";
 import { transition } from 'd3-transition';
+ 
+class Axis extends Component {
 
-class Axis extends React.Component {
   constructor() {
     super();
     this.ref = React.createRef();
   }
+
   componentDidMount() {
     this.renderAxis();
   }
+
   componentDidUpdate() {
     this.updateAxis();
   }
+
   renderAxis() {
     const { scale, orient, ticks } = this.props;
     const node = this.ref.current;
@@ -28,6 +32,7 @@ class Axis extends React.Component {
     }
     select(node).call(axis);
   }
+
   updateAxis() {
     const { scale, orient, ticks } = this.props;
     const t = transition().duration(1000)
@@ -37,6 +42,7 @@ class Axis extends React.Component {
       selectAll(`.${orient}`).transition(t).call(axis)
     }
   }
+  
   render() {
     const { orient, transform } = this.props;
     return (

@@ -1,5 +1,6 @@
 import React from 'react';
 import Axis from './axis';
+import "./axis.css"
 
 const XYAxis = ({ xScale, yScale, height }) => {
   const xSettings = {
@@ -7,12 +8,15 @@ const XYAxis = ({ xScale, yScale, height }) => {
     orient: 'bottom',
     transform: `translate(0, ${height})`,
   };
+  
   const ySettings = {
     scale: yScale,
     orient: 'left',
     transform: 'translate(0, 0)',
     ticks: 6,
   };
+  
+ 
   return (
     <g className="axis-group">
       <Axis {...xSettings} />
