@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import LineChart from './components/linechart/LineChart';
+import LineChart from './components/linechart/lineChart';
 import ToolTip from './components/tooltip/ToolTip';
 
 class App extends Component {
